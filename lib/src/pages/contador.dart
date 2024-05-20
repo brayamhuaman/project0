@@ -12,7 +12,7 @@ class _ContadorState extends State<Contador> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("Contador"),
       ),
       body: Center(
         child:  Text("Contador: $_count", style: const TextStyle(
@@ -21,13 +21,19 @@ class _ContadorState extends State<Contador> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          
-          setState(() {
-            _count = _count + 1;
-          });
+
+         _incrementar(); 
+         
         },	
         child: const Icon(Icons.add),
       )
     );
   }
+  void _incrementar(){
+  setState(() {
+    _count++;
+  });
 }
+
+}
+
